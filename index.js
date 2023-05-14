@@ -51,7 +51,7 @@ client.on('message', async (message) => {
         if(message.from === '6285777818508@c.us'){
             if(message.body === '/start'){
                 await client.sendMessage('6285777818508@c.us', 'Schedule Started...')
-                cron.schedule('35 19 * * *', dailyTask, {
+                cron.schedule('0 18 * * *', dailyTask, {
                     timezone: 'Asia/Jakarta'
                 });
             };
