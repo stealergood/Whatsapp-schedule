@@ -6,17 +6,17 @@ const { Client , LocalAuth   } = require('whatsapp-web.js');
 
 
 const client = new Client({
+    authStrategy: new LocalAuth(),
     puppeteer: {
         args: ['--no-sandbox'],
-    },
-    authStrategy: new LocalAuth()
+    }
 });
 
 client.on('authenticated', (session) => {
     console.log('session restarted');
 });
 
-client.initialize();
+client.initialize().catch(_=>_)
 client.on("qr", qr => {
     qrcode.generate(qr, {small: true} );
 });
@@ -51,7 +51,7 @@ client.on('message', async (message) => {
         if(message.from === '6285777818508@c.us'){
             if(message.body === '/start'){
                 await client.sendMessage('6285777818508@c.us', 'Schedule Started...')
-                cron.schedule('0 19 * * *', dailyTask, {
+                cron.schedule('35 19 * * *', dailyTask, {
                     timezone: 'Asia/Jakarta'
                 });
             };
