@@ -1,7 +1,7 @@
 const qrcode = require('qrcode-terminal');
 const cron = require('node-cron');
 const moment = require('moment-timezone');
-const { Client /*, LocalAuth */  } = require('whatsapp-web.js');
+const { Client , LocalAuth   } = require('whatsapp-web.js');
 
 
 
@@ -9,7 +9,7 @@ const client = new Client({
     puppeteer: {
         args: ['--no-sandbox'],
     },
-    // authStrategy: new LocalAuth()
+    authStrategy: new LocalAuth()
 });
 
 client.on('authenticated', (session) => {
@@ -48,11 +48,13 @@ client.on('message', async (message) => {
                 client.sendMessage('120363044438132481@g.us', `Jangan Lupa Absen Bahasa Pemprogaman Sayangku Cintaku❤️`);
             };
         };
-        if(message.body === '/start'){
-            await client.sendMessage('120363044438132481@g.us', 'Schedule Started...')
-            cron.schedule('0 18 * * *', dailyTask, {
-                timezone: 'Asia/Jakarta'
-            });
+        if(message.from === '6285777818508@c.us'){
+            if(message.body === '/start'){
+                await client.sendMessage('6285777818508@c.us', 'Schedule Started...')
+                cron.schedule('0 19 * * *', dailyTask, {
+                    timezone: 'Asia/Jakarta'
+                });
+            };
         };
     } catch (error) {
         console.log(error)
