@@ -33,19 +33,19 @@ client.on('message', async (message) => {
             const jakartaTime = moment(now).tz('Asia/Jakarta');
             const dayOfWeek = jakartaTime.day();
             if(dayOfWeek === 0 || dayOfWeek == 7){
-                client.sendMessage('120363044438132481@g.us', `Minggu Jangan Lupa Deadline Beib😘`);
+                client.sendMessage('120363044438132481@g.us', `Minggu Jangan Lupa Deadline Beib`);
             }else if(dayOfWeek === 1){
-                client.sendMessage('120363044438132481@g.us', `Jangan Lupa Absen PBO Sayangku Cintaku❤️`);
+                client.sendMessage('120363044438132481@g.us', `Jangan Lupa Absen PBO Sayangku Cintaku`);
             }else if(dayOfWeek === 2){
-                client.sendMessage('120363044438132481@g.us', `Jangan Lupa Absen KWU dan RPL Sayangku Cintaku❤️`);
+                client.sendMessage('120363044438132481@g.us', `Jangan Lupa Absen KWU dan RPL Sayangku Cintaku`);
             }else if(dayOfWeek === 3){
-                client.sendMessage('120363044438132481@g.us', `Jangan Lupa Absen Basis Data dan SO Sayangku Cintaku❤️`);
+                client.sendMessage('120363044438132481@g.us', `Jangan Lupa Absen Basis Data dan SO Sayangku Cintaku`);
             }else if(dayOfWeek === 4){
-                client.sendMessage('120363044438132481@g.us', `Kamis Libur Tapi Jangan Lupa Nugas Beib😘`);
+                client.sendMessage('120363044438132481@g.us', `Kamis Libur Tapi Jangan Lupa Nugas Beib`);
             }else if(dayOfWeek === 5){
-                client.sendMessage('120363044438132481@g.us', `Jumat Libur Tapi Jangan Lupa Nugas Beib😘`);
+                client.sendMessage('120363044438132481@g.us', `Jumat Libur Tapi Jangan Lupa Nugas Beib`);
             }else if(dayOfWeek === 6){
-                client.sendMessage('120363044438132481@g.us', `Jangan Lupa Absen Bahasa Pemprogaman Sayangku Cintaku❤️`);
+                client.sendMessage('120363044438132481@g.us', `Jangan Lupa Absen Bahasa Pemprogaman Sayangku Cintaku`);
             };
         };
         if(message.from === '6285777818508@c.us'){
