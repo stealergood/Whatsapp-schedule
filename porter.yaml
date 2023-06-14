@@ -1,0 +1,4 @@
+apps:
+  my-app-worker:
+    type: worker
+    run: "node index.js"
